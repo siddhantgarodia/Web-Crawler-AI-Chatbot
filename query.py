@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 # --- Configuration ---
 
 # 1. PASTE YOUR API KEY HERE
-API_KEY = "AIzaSyD5rRbN3O7AGKoJIl8fIIp_jhKmiUqjrw8"
+API_KEY = os.environ.get("GENAI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
 
 # 2. This must match the folder where you saved your index
 INDEX_DIR = "faiss_index"
@@ -290,4 +290,5 @@ if __name__ == "__main__":
         except FileNotFoundError as e:
             print(e)
         except Exception as e:
+
             print(f"An unexpected error occurred: {e}")
