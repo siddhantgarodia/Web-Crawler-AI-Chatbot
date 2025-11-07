@@ -1,6 +1,6 @@
-# MOSDAC Crawler — README
+# Web Crawler AI Chatbot
 
-A short guide to the MOSDAC crawler project: architecture, pipeline, modules, Playwright usage, outputs, and how to run it on Windows (PowerShell).
+A short guide to the AI crawler project: architecture, pipeline, modules, Playwright usage, outputs, and how to run it on Windows.
 
 ## Project overview
 
@@ -181,20 +181,3 @@ python query.py
 
 - Respect `robots.txt` and site terms of service. The crawlers in this repo do not automatically respect `robots.txt` — add that logic or run only on sites you have permission to crawl.
 - Be cautious with large-scale crawling: limit rate and enforce polite pauses; the sample crawlers use small sleeps but are not production-grade.
-
-
-## Next steps / improvements you might want
-
-- Reuse a Playwright browser instance across pages for higher throughput.
-- Add a `requirements.txt` and/or `pyproject.toml` for reproducible installs.
-- Add `robots.txt` compliance and concurrency controls.
-- Add unit tests for the JSON cleaning and filename normalization logic.
-
-
----
-
-If you want, I can also:
-- Add a `requirements.txt` with pinned versions.
-- Fix a small bug I noticed in `crawler.py`'s entrypoint check so `python crawler.py` works as expected.
-
-Tell me which of the two additions you'd like me to do next.
